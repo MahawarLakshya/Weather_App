@@ -1,0 +1,232 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --col1: rgba(23, 102, 249, 0.125);
+    --col2: #85a4e150;
+}
+
+.header {
+    background-image: url(bg_img.jpeg);
+    background-size: cover;
+}
+
+
+/* .header h1 {
+    color: azure;
+    margin-left: 335px;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.header h1 {
+    color: azure;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.glass {
+    width: 400px;
+    height: min-content;
+    border-radius: 15px;
+    background: var(--col1);
+    box-shadow: 0 10px 330px var(--col2);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--col2);
+    transition: .4s ease all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass:hover {
+    transform: scale(1.1, 1.2);
+    background: var(--col2);
+    backdrop-filter: blur(10px);
+}
+
+.container-inside {
+    width: 100%;
+    min-height: 100%;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-box {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 24px;
+    font-size: 20px;
+    color: black;
+    border-radius: 15px;
+    text-transform: capitalize;
+}
+
+::placeholder {
+    size: 50px;
+    color: rgb(50, 47, 47);
+}
+
+button {
+    background: #709aee50;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    size: 20px;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: transparent;
+    /* border: none;
+    outline: none; */
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    /* border-radius: 5px; */
+}
+
+.weather-body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 20px;
+}
+
+.weather-body img {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed the container width */
+    max-height: 100%;
+    /* Ensure the image doesn't exceed the container height */
+    object-fit: contain;
+    /* Adjust this property as needed (cover, contain, etc.) */
+    border-radius: 15px;
+    /* Optional: Add border-radius to match the glass */
+}
+
+.weather-box {
+    display: flex;
+    margin-block: 20px;
+    text-align: center;
+    flex-direction: row;
+}
+
+.weather-box .temprature {
+    font-size: 40px;
+    font-weight: 800;
+    position: relative;
+}
+
+.weather-box .description {
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    text-transform: capitalize;
+    margin: 5px;
+}
+
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.humidity,
+.wind {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.weather-details i {
+    font-size: 36px;
+}
+
+.text span {
+    font-size: 20px;
+    font-style: bold;
+}
+
+.location-not-found {
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-not-found h2 {
+    font-size: 28px;
+    color: #181717;
+    margin-block-end: 15px;
+}
+
+.location-not-found img {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed the container width */
+    max-height: 100%;
+    /* Ensure the image doesn't exceed the container height */
+    object-fit: contain;
+    /* Adjust this property as needed (cover, contain, etc.) */
+    border-radius: 15px;
+}
+
+
+/* Media query for medium-sized screens */
+
+@media screen and (max-width: 768px) {
+    .glass {
+        width: 90%;
+        /* Adjust the width for medium-sized screens */
+    }
+}
+
+
+/* Media query for small screens */
+
+@media screen and (max-width: 480px) {
+    .glass {
+        width: 80%;
+        /* Adjust the width for small screens */
+    }
+}
+
+
+/* Media query for devices with width 325px */
+
+@media screen and (max-width: 376px) {
+    .input-box {
+        font-size: 14px;
+        /* Adjust font size for the input box */
+    }
+    button {
+        width: 25px;
+        /* Adjust button width */
+        height: 25px;
+        /* Adjust button height */
+    }
+}

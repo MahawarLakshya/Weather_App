@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Check Today's Weather Here</h1>
+        <div class="container">
+            <div class="glass">
+                <div class="conatiner-inside">
+                    <input type="text" placeholder="Enter Your Location" class="input-box">
+                    <button id="search-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/16px-Search_Icon.svg.png"></button>
+                    <div class="weather-box">
+                        <p class="temprature">-</p>
+                        <p class="description">-</p>
+                        <div class="weather-deatails">
+                            <div class="humidity ">
+                                <i class="fa-sharp fa-solid fa-droplet"></i>
+                                <div class="text">
+                                    <span id="humidity">-%</span>
+                                    <p>Humidity</p>
+                                </div>
+                            </div>
+                            <div class="wind">
+                                <i class="fa-solid fa-wind"></i>
+                                <div class="text">
+                                    <span id="wind-speed">-Km/H</span>
+                                    <p>Wind Speed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weather-body">
+                        <img src="" class="weather-img">
+                    </div>
+                    <div class="location-not-found">
+                        <h2>Sorry Location not found!!</h2>
+                        <img src="error.png" alt="404 error">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/595a890311.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
